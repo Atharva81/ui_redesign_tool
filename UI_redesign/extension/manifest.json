@@ -1,0 +1,21 @@
+{
+  "manifest_version": 2,
+  "name": "Personalized UI",
+  "version": "0.1",
+  "icons": {"128" : "customuilogo.png"},
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.ndtv.com/latest/page-1"
+      ],
+      "js": ["jquery.min.js","content.js"],
+    "css" : ["scraper.css"]
+    }],
+   "browser_action": {
+     "default_icon" : "customuilogo.png",
+     "default_popup" : "popup.html",
+     "content_security_policy": "script-src 'self' https://www.youtube.com; object-src 'self'"
+     
+   },
+   "permissions" : ["activeTab"]
+}
